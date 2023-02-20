@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom";
 
 
 const Title=()=>{
@@ -13,10 +14,10 @@ const HeaderComponent=()=>{
         <div className="header">
             <Title/>
             <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                <ul> 
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
                     <li>Cart</li>
                 </ul>
             </div>
