@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { IMG_CDN_URL } from "../config"
 const RestaurantCard=({name,cuisines,avgRating,cloudinaryImageId})=>{
     

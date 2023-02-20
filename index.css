@@ -35,3 +35,20 @@
   height: 200px;
   margin: 20px;
 }
+
+.restaurantDetails{
+  border: 1px solid black;
+}
+
+.restaurant{
+  display:flex;
+}
+
+.restaurantMenu {
+  margin:auto;
+  padding: auto;
+}
+
+.restaurantMenu{
+  list-style: none;
+}
