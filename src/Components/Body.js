@@ -43,9 +43,10 @@ const Body=()=>{
     </div>    
     <div className="Restaurant-list">
         {
-            filteredRestaurants.map(restaurant=>{
+            filteredRestaurants?.length===0 ? (<h1>No restaurant found with name {searchTxt}</h1>) :
+            (filteredRestaurants.map(restaurant=>{
                 return <RestaurantCard {...restaurant.data} key={restaurant.data.id}/>
-            })
+            }))
         }
     </div>
     </>
