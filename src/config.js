@@ -1263,3 +1263,5 @@ export const RestaurantList=[
   }]
 
 export const IMG_CDN_URL="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"
+
+export const RES_CDN_URL="https://www.swiggy.com/dapi/menu/v4/full?lat=19.2183307&lng=72.9780897&menuId="
