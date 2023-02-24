@@ -9,6 +9,7 @@ import ContactComponent from "./Components/Contact";
 import RestaurantDetailsComponent from "./Components/RestaurantDetails";
 
 //JSX=>React.createElement=>Object=>HTML DOM
+//lazyLoading
 const Instamart=lazy(()=>import("./Components/Instamart"))
 
 

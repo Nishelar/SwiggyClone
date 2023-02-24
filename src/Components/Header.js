@@ -5,24 +5,24 @@ import { Link } from "react-router-dom";
 const Title=()=>{
     return (
     <a href="/" ><img src="https://assets.materialup.com/uploads/61d86780-be13-47fa-81a6-226aac22db27/preview.jpg"
-    alt="Food Villa" className="logo"/> </a>)
+    alt="Food Villa" className="h-24"/> </a>)
 }
 
 const HeaderComponent=()=>{
     const [isLoggedIn,setIsLoggedIn]=useState(false);
     return (
-        <div className="header">
+        <div className="flex justify-between bg-orange-400 text-white font-sans font-semibold">
             <Title/>
             <div className="nav-items">
-                <ul> 
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
-                    <li><Link to="/instamart">Instamart</Link></li>
-                    <li>Cart</li>
+                <ul className="flex py-8 text-lg "> 
+                    <li className="px-3 hover:text-violet-800"><Link to="/">Home</Link></li>
+                    <li className="px-3  hover:text-violet-800"><Link to="/about">About</Link></li>
+                    <li className="px-3  hover:text-violet-800"><Link to="/contact">Contact</Link></li>
+                    <li className="px-3  hover:text-violet-800"><Link to="/instamart">Instamart</Link></li>
+                    <li className="px-3  hover:text-violet-800">Cart</li>
                 </ul>
             </div>
-            {(!isLoggedIn) ? (<button onClick={()=>setIsLoggedIn(true)}>LogIn</button>) : (<button onClick={()=>setIsLoggedIn(false)}>LogOut</button>)}
+            {(!isLoggedIn) ? (<button className="pr-8 text-white text-lg" onClick={()=>setIsLoggedIn(true)}>LogIn</button>) : (<button className="pr-8 text-lg text-white" onClick={()=>setIsLoggedIn(false)}>LogOut</button>)}
         </div>
     )
 }
