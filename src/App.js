@@ -7,6 +7,9 @@ import About from "./Components/About";
 import Error from "./Components/Error";
 import ContactComponent from "./Components/Contact";
 import RestaurantDetailsComponent from "./Components/RestaurantDetails";
+import { Provider } from "react-redux";
+import store from "./Utils/store";
+import Cart from "./Components/Cart";
 
 //JSX=>React.createElement=>Object=>HTML DOM
 //lazyLoading
@@ -18,11 +21,11 @@ const Instamart=lazy(()=>import("./Components/Instamart"))
 
 const AppLayout=()=>{
     return(
-    <React.Fragment>
+    <Provider store={store}>
     <HeaderComponent/>
     <Outlet/>
     {/*<Footer/>*/}
-    </React.Fragment>
+    </Provider>
     )
 }
 
@@ -50,6 +53,10 @@ const appRouter=createBrowserRouter([
         {
             path:"/instamart",
             element:<Suspense><Instamart/></Suspense>
+        },
+        {
+            path:"/cart",
+            element:<Cart/>
         }
     ]
     }
